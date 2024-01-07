@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人資訊網頁</title>
+    <style>
+        /* 初始樣式 */
+        #info {
+            font-size: 16px;
+            color: black;
+        }
+        #photo {
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="info">
+    學號：91018107<br>
+    姓名：楊翔宇<br>
+    <img id="photo" src="https://hips.hearstapps.com/hmg-prod/images/f1-1666681730.png?crop=0.494xw:0.987xh;0,0&resize=640:*" alt="自拍大頭照">
+</div>
+
+<button onclick="changeFontAndColor()">調整字體和顏色</button>
+<button onclick="adjustPhotoStyle()">調整大頭照樣式</button>
+<button onclick="changePhoto()">換生活照</button>
+
+<script>
+    function changeFontAndColor() {
+        var infoElement = document.getElementById('info');
+        infoElement.style.fontSize = '20px';
+        infoElement.style.color = 'blue';
+    }
+
+    function adjustPhotoStyle() {
+        var photoElement = document.getElementById('photo');
+        photoElement.style.border = '4px solid red';
+        photoElement.style.borderRadius = '10px';
+    }
+
+    function changePhoto() {
+        var photoElement = document.getElementById('photo');
+        photoElement.src = 'path_to_lifestyle_photo.jpg';
+    }
+</script>
+
+</body>
+</html>
